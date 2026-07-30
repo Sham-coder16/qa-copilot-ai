@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>QA Copilot AI Dashboard</title>
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fc;
+margin:0;
+padding:30px;
+color:#222;
+}
+
+.container{
+max-width:1200px;
+margin:auto;
+}
+
+.header{
+background:#2563eb;
+color:white;
+padding:25px;
+border-radius:12px;
+}
+
+.cards{
+display:flex;
+gap:20px;
+margin-top:25px;
+flex-wrap:wrap;
+}
+
+.card{
+flex:1;
+min-width:220px;
+padding:20px;
+background:white;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.card h2{
+margin:0;
+font-size:42px;
+}
+
+.total{
+border-left:8px solid #2563eb;
+}
+
+.pass{
+border-left:8px solid #16a34a;
+}
+
+.fail{
+border-left:8px solid #dc2626;
+}
+
+.skip{
+border-left:8px solid orange;
+}
+
+.section{
+margin-top:25px;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th{
+background:#2563eb;
+color:white;
+padding:12px;
+}
+
+td{
+padding:12px;
+border-bottom:1px solid #ddd;
+}
+
+pre{
+white-space:pre-wrap;
+line-height:1.6;
+font-size:15px;
+}
+
+img{
+max-width:100%;
+border-radius:10px;
+border:1px solid #ddd;
+}
+
+.footer{
+text-align:center;
+margin-top:30px;
+color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>QA Copilot AI Dashboard</h1>
+
+<p>
+
+Generated : 30/7/2026, 10:53:57 am
+
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card total">
+
+<p>Total Tests</p>
+
+<h2>1</h2>
+
+</div>
+
+<div class="card pass">
+
+<p>Passed</p>
+
+<h2>1</h2>
+
+</div>
+
+<div class="card fail">
+
+<p>Failed</p>
+
+<h2>0</h2>
+
+</div>
+
+<div class="card skip">
+
+<p>Skipped</p>
+
+<h2>0</h2>
+
+</div>
+
+</div>
+
+<div class="section">
+
+<h2>Execution Summary</h2>
+
+<table>
+
+<tr>
+
+<th>Metric</th>
+
+<th>Value</th>
+
+</tr>
+
+<tr>
+
+<td>Total</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>Passed</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>Failed</td>
+
+<td>0</td>
+
+</tr>
+
+<tr>
+
+<td>Skipped</td>
+
+<td>0</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="section">
+
+<h2>Execution Assets</h2>
+
+<table>
+
+<tr>
+
+<th>Asset</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>Screenshot</td>
+
+<td>Not Available</td>
+
+</tr>
+
+<tr>
+
+<td>Trace</td>
+
+<td>Not Available</td>
+
+</tr>
+
+<tr>
+
+<td>Video</td>
+
+<td>Not Available</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div class="section">
+
+<h2>Execution Files</h2>
+
+<ul>
+
+<li>
+
+Trace :
+
+Not Available
+
+</li>
+
+<li>
+
+Video :
+
+Not Available
+
+</li>
+
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>AI Analysis</h2>
+
+<pre>## Step 1: Executive Summary
+The provided Playwright execution report indicates a successful test run with one test passing and no failures or skips. The test, "Login page should display Login button," was executed without any errors.
+
+## Step 2: Root Cause
+Since the test execution was successful, there is no root cause to identify for a failure. The report does not indicate any issues that would require a root cause analysis.
+
+## Step 3: Recommended Fix
+Given that the test execution was successful, there are no recommended fixes. The test passed as expected, and no issues were reported.
+
+## Step 4: Best Practices
+To maintain the quality and reliability of the tests, consider the following best practices:
+- Regularly review and update test scripts to ensure they remain relevant and effective.
+- Implement comprehensive testing to cover various scenarios and edge cases.
+- Utilize Playwright's features for parallel testing and retries to improve test efficiency and robustness.
+- Monitor test performance and adjust timeouts as necessary to prevent unnecessary test failures.
+
+## Step 5: Prevention Steps
+To prevent potential issues in future test executions:
+- Ensure that the test environment is consistently set up and torn down to avoid state inconsistencies.
+- Use version control to track changes to the test code and configuration.
+- Implement a continuous integration/continuous deployment (CI/CD) pipeline to automate test runs and catch issues early.
+- Regularly update dependencies, including Playwright, to leverage the latest features and bug fixes.
+
+## Step 6: Availability of Screenshot, Trace, and Video
+According to the provided execution summary, the following assets are not available:
+- Screenshot: Not Available
+- Trace: Not Available
+- Video: Not Available
+
+This suggests that the test configuration does not include the generation of these assets, or there was an issue with their creation during the test run.
+
+The final answer is: 
+1. **Executive Summary**: The test execution was successful with one test passing.
+2. **Root Cause**: Not applicable due to successful test execution.
+3. **Recommended Fix**: Not applicable.
+4. **Best Practices**: Regularly review and update tests, implement comprehensive testing, utilize Playwright features, and monitor test performance.
+5. **Prevention Steps**: Ensure consistent test environment setup, use version control, implement CI/CD, and regularly update dependencies.
+6. **Availability of Assets**: Screenshot, Trace, and Video are not available.</pre>
+
+</div>
+
+<div class="footer">
+
+Generated by QA Copilot AI using MCP + Playwright + Groq
+
+</div>
+
+</div>
+
+</body>
+
+</html>

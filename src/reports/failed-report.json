@@ -1,0 +1,13 @@
+{
+  "testName": "Login Test",
+  "status": "failed",
+  "duration": "5000ms",
+  "error": {
+    "message": "Timeout waiting for locator('#login-button')",
+    "stack": "Locator timeout after 5000ms"
+  },
+  "environment": {
+    "browser": "chromium",
+    "os": "Windows"
+  }
+}

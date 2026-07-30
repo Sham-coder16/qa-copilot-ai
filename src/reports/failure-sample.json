@@ -1,0 +1,16 @@
+{
+  "stats": {
+    "expected": 0,
+    "unexpected": 1,
+    "skipped": 0
+  },
+  "tests": [
+    {
+      "title": "Login page should display Login button",
+      "status": "failed",
+      "error": {
+        "message": "Timeout 30000ms exceeded waiting for locator('button#login')"
+      }
+    }
+  ]
+}

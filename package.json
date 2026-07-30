@@ -1,0 +1,51 @@
+{
+  "name": "qa-copilot-ai",
+  "version": "1.0.0",
+  "description": "AI Powered QA Copilot using MCP, Groq and Playwright",
+  "type": "module",
+  "main": "index.js",
+
+  "scripts": {
+    "dev": "tsx src/mcp-server/server.ts",
+    "mcp": "tsx src/mcp-server/server.ts",
+    "api": "tsx src/api/server.ts",
+    "build": "tsc",
+    "start": "node dist/mcp-server/server.js",
+    "test": "playwright test",
+    "analyze": "tsx src/analyze.ts"
+  },
+
+  "keywords": [
+    "mcp",
+    "playwright",
+    "qa",
+    "automation",
+    "groq",
+    "ai"
+  ],
+
+  "author": "",
+  "license": "ISC",
+
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "better-sqlite3": "^13.0.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "groq-sdk": "^1.4.1",
+    "openai": "^7.1.0",
+    "zod": "^4.4.3"
+  },
+
+  "devDependencies": {
+    "@playwright/test": "^1.62.0",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
