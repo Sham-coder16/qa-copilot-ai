@@ -1,117 +1,176 @@
 # 🤖 QA Copilot AI
 
-> **An AI-powered QA Assistant built using Model Context Protocol (MCP), Express.js, TypeScript, and Groq LLM to analyze test failures, generate fixes, classify issues, detect flaky tests, and assist QA engineers.**
-
 ![Architecture](docs/architecture.png)
+
+> **An AI-powered QA Assistant that helps QA engineers analyze test failures, identify root causes, generate fixes, classify defects, detect flaky tests, and automate testing activities using MCP, TypeScript, and Large Language Models.**
 
 ---
 
-# 🚀 Project Overview
+## 🚀 Project Overview
 
-QA Copilot AI is an intelligent assistant for Software Testing teams. It exposes multiple QA capabilities through an MCP server and REST API, allowing AI clients to analyze Playwright test reports, understand failures, suggest fixes, classify issues, detect flaky tests, and generate testing artifacts.
+Modern QA teams spend significant time analyzing failed automation tests, debugging errors, writing bug reports, and identifying flaky tests.
 
-The project demonstrates how Large Language Models can be integrated into modern QA workflows using the **Model Context Protocol (MCP)**.
+**QA Copilot AI** is an AI-assisted testing platform designed to reduce debugging effort by combining:
+
+* Model Context Protocol (MCP)
+* Large Language Models (Groq LLM)
+* Playwright automation data
+* REST APIs
+* TypeScript backend services
+
+The system allows QA engineers to provide test reports and receive AI-generated insights such as:
+
+* Root cause analysis
+* Failure classification
+* Suggested fixes
+* Test improvement recommendations
+* Automated QA artifacts
+
+---
+
+# 🎯 Problem Statement
+
+Automation failures often require manual investigation:
+
+❌ Reading long stack traces
+❌ Finding root causes
+❌ Identifying flaky tests
+❌ Writing defect reports
+❌ Creating repetitive test cases
+
+QA Copilot AI solves this by acting as an intelligent testing assistant.
 
 ---
 
 # ✨ Features
 
-* ✅ MCP Server implementation
-* ✅ REST API using Express.js
-* ✅ AI-powered Failure Analysis
-* ✅ AI Report Analyzer
-* ✅ Intelligent Fix Suggestions
-* ✅ Failure Classification
-* ✅ Flaky Test Detection
-* ✅ API Test Generator
-* ✅ Test Case Generator
-* ✅ Playwright Script Generator
-* ✅ Bug Report Generator
-* ✅ Modular TypeScript Architecture
-* ✅ Groq LLM Integration
-* ✅ Environment-based Configuration
-* ✅ Error Handling
-* ✅ Logging Utilities
+## AI-Powered QA Analysis
+
+✅ Failure Analysis
+✅ Test Report Analysis
+✅ Root Cause Identification
+✅ Fix Suggestions
+✅ Failure Classification
+✅ Flaky Test Detection
+
+## Test Automation Assistance
+
+✅ API Test Generator
+✅ Test Case Generator
+✅ Playwright Script Generator
+✅ Bug Report Generator
+
+## Engineering Features
+
+✅ MCP Server Implementation
+✅ REST API using Express.js
+✅ Modular TypeScript Architecture
+✅ Environment Configuration
+✅ Error Handling
+✅ Logging Utilities
 
 ---
 
-# 🏗 Architecture
+# 🏗 System Architecture
+
+![Architecture](docs/architecture.png)
+
+Workflow:
 
 ```
-                Playwright Test Report
-                          │
-                          ▼
-                  QA Copilot AI API
-                          │
-                          ▼
-                    MCP Server Layer
-                          │
-        ┌─────────────────┼─────────────────┐
-        │                 │                 │
-        ▼                 ▼                 ▼
- Failure Analyzer   Report Analyzer   Fix Suggestion
-        │                 │                 │
-        └─────────────────┼─────────────────┘
-                          ▼
-                  Groq Large Language Model
-                          │
-                          ▼
-                AI Generated Response
+QA Engineer
+     |
+     |
+Test Reports / Logs
+     |
+     v
+QA Copilot API
+     |
+     v
+MCP Server
+     |
+     |
+-----------------------------
+|      |        |            |
+Failure Report  Fix     Flaky
+Analyzer Analyzer Suggest Detector
+
+     |
+     v
+
+Groq Large Language Model
+
+     |
+     v
+
+AI Generated QA Insights
 ```
 
 ---
 
 # 🛠 Tech Stack
 
-| Category        | Technology                   |
-| --------------- | ---------------------------- |
-| Language        | TypeScript                   |
-| Runtime         | Node.js                      |
-| API             | Express.js                   |
-| AI              | Groq LLM                     |
-| Protocol        | Model Context Protocol (MCP) |
-| Testing         | Playwright                   |
-| Package Manager | npm                          |
-| Configuration   | dotenv                       |
+| Category        | Technology             |
+| --------------- | ---------------------- |
+| Language        | TypeScript             |
+| Runtime         | Node.js                |
+| Backend         | Express.js             |
+| AI Model        | Groq LLM               |
+| Protocol        | Model Context Protocol |
+| Automation      | Playwright             |
+| Package Manager | npm                    |
+| Configuration   | dotenv                 |
 
 ---
 
 # 📁 Project Structure
 
 ```
+QA-Copilot-AI
+
 src/
  ├── ai/
+ │    └── promptTemplates.ts
+ |
  ├── api/
- ├── config/
- ├── database/
- ├── errors/
+ |
  ├── mcp-server/
- ├── services/
+ |
  ├── tools/
- ├── types/
+ |
+ ├── services/
+ |
+ ├── config/
+ |
  └── utils/
 
-dist/
 docs/
+ ├── architecture.png
+ └── architecture.md
+
+screenshots/
+
+package.json
+README.md
 ```
 
 ---
 
 # ⚙ Installation
 
-Clone the repository
+Clone repository:
 
 ```bash
 git clone https://github.com/Sham-coder16/qa-copilot-ai.git
 ```
 
-Go into the project
+Navigate:
 
 ```bash
 cd qa-copilot-ai
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 npm install
@@ -119,34 +178,49 @@ npm install
 
 ---
 
-# 🔑 Environment Variables
+# 🔑 Environment Setup
 
-Create a `.env` file.
-
-Example:
+Create `.env`
 
 ```env
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=your_api_key
 PORT=3000
 ```
 
 ---
 
-# ▶ Running the Project
+# ▶ Running Application
 
-Start the MCP Server
+## Start MCP Server
 
 ```bash
 npm run mcp
 ```
 
-Start the REST API
+Expected:
+
+```
+MCP SERVER STARTED
+Tools Registered Successfully
+```
+
+---
+
+## Start API Server
 
 ```bash
 npm run api
 ```
 
-Run the Test Client
+Expected:
+
+```
+API Server running on port 3000
+```
+
+---
+
+## Run Test Client
 
 ```bash
 npx tsx src/test-client.ts
@@ -154,43 +228,45 @@ npx tsx src/test-client.ts
 
 ---
 
-# 🔧 Available MCP Tools
+# 🔧 MCP Tools
 
-* Ping
-* Failure Analyzer
-* Report Analyzer
-* Suggest Fix
-* Failure Classification
-* Flaky Detector
-* API Test Generator
-* Test Case Generator
-* Bug Report Generator
-* Playwright Script Generator
+Available tools:
+
+| Tool                   | Purpose                   |
+| ---------------------- | ------------------------- |
+| Failure Analyzer       | Analyze failed tests      |
+| Report Analyzer        | Analyze execution reports |
+| Suggest Fix            | Generate solutions        |
+| Failure Classification | Categorize failures       |
+| Flaky Detector         | Detect unstable tests     |
+| Test Generator         | Generate automation tests |
+| Bug Generator          | Create defect reports     |
 
 ---
 
-# 📡 REST API
+# 📡 REST API Example
 
-Example Endpoint
+Endpoint:
 
 ```
 POST /analyze
 ```
 
-Request
+Request:
 
 ```json
 {
-  "report": "sample-report.json"
+ "failure": "Login test failed due to timeout"
 }
 ```
 
-Response
+Response:
 
 ```json
 {
-  "status": "success",
-  "analysis": "AI-generated analysis"
+ "category":"Automation Failure",
+ "rootCause":"Element loading issue",
+ "suggestion":"Increase explicit wait"
 }
 ```
 
@@ -198,64 +274,46 @@ Response
 
 # 📸 Screenshots
 
-Create the following folder:
+Project screenshots:
 
 ```
-docs/screenshots/
+screenshots/
 ```
 
-Suggested screenshots:
+Examples:
 
 * MCP Server Running
-* API Running
-* AI Response
-* Failure Analysis
-* Report Analysis
-* GitHub Repository
-* Architecture Diagram
+* API Server Running
+* AI Failure Analysis
+* Generated Bug Report
+* Test Generation Output
 
 ---
 
-# 🚀 Future Enhancements
+# 🔄 Future Enhancements
 
 * Docker Support
-* Authentication
-* CI/CD Pipeline
-* Database Persistence
-* Multiple LLM Providers
+* GitHub Actions CI/CD
+* Jenkins Pipeline Integration
+* Database Storage
 * Web Dashboard
+* Multiple LLM Provider Support
 * Playwright HTML Report Integration
-* Jenkins Integration
-* GitHub Actions Integration
 
 ---
 
 # 💡 Skills Demonstrated
 
-* TypeScript
-* Node.js
-* Express.js
+* QA Automation
+* Playwright Testing
+* TypeScript Development
+* Node.js Backend
+* REST API Development
 * AI Integration
 * Prompt Engineering
-* MCP Server Development
-* REST API Development
-* Error Handling
-* Modular Architecture
-* QA Automation Concepts
-* Playwright
-* GitHub
-
----
-
-# 📚 Learning Outcomes
-
-This project demonstrates:
-
-* Building AI-enabled QA tools
-* Designing modular backend architecture
-* Integrating Large Language Models
-* Developing MCP-compatible tools
-* Creating scalable TypeScript applications
+* MCP Architecture
+* LLM Testing Concepts
+* GitHub Project Management
 
 ---
 
@@ -264,13 +322,9 @@ This project demonstrates:
 **Shamli Kadukar**
 
 GitHub:
-https://github.com/Sham-coder16
 
-Repository:
-https://github.com/Sham-coder16/qa-copilot-ai
+https://github.com/Sham-coder16
 
 ---
 
-# ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
+⭐ If this project helped you understand AI-powered QA automation, consider starring the repository.
