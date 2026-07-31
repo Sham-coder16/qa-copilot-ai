@@ -273,22 +273,31 @@ Response:
 ---
 
 # 📸 Screenshots
+# 📸 Project Screenshots
 
-Project screenshots:
+## MCP Server Running
 
-```
-screenshots/
-```
+![MCP Server](screenshots/mcp-server.png)
 
-Examples:
 
-* MCP Server Running
-* API Server Running
-* AI Failure Analysis
-* Generated Bug Report
-* Test Generation Output
+## API Server Running
 
----
+![API Running](screenshots/api-running.png)
+
+
+## AI Failure Analysis
+
+![Failure Analysis](screenshots/postman-report-analysis.png)
+
+
+## Bug Report Generation
+
+![Bug Report](screenshots/postman-bug-report.png)
+
+
+## Test Case Generation
+
+![Test Case Generator](screenshots/postman-testcase-generator.png)
 
 # 🔄 Future Enhancements
 
