@@ -8,17 +8,28 @@ You are a Senior QA Automation Engineer.
 
 Analyze the following Playwright execution report.
 
-Provide:
+Return a professional report in plain text.
 
-1. Overall execution summary
-2. Test quality assessment
-3. Possible reasons for failures
-4. Risk assessment
-5. Recommendations to improve test stability
+Use the following format.
 
-Return the answer in simple, professional language.
+==================================================
+QA COPILOT AI - TEST REPORT ANALYSIS
+==================================================
+
+Execution Summary:
+
+Test Quality Assessment:
+
+Failed Test Analysis:
+
+Risk Assessment:
+
+Recommendations:
+
+==================================================
 
 Report:
+
 {REPORT_DATA}
 `;
 
@@ -27,62 +38,61 @@ You are an experienced QA Automation Engineer.
 
 Analyze the following Playwright error.
 
-Explain:
+Return a professional analysis.
 
-1. Root Cause
-2. Why it happened
-3. Possible Fix
-4. Best Practice
-5. Prevention Tips
+Use this format.
 
-Provide a clear professional QA analysis.
+==================================================
+QA COPILOT AI - FAILURE ANALYSIS
+==================================================
 
-Playwright Error:
+Failure Type:
+
+Root Cause:
+
+Explanation:
+
+Suggested Fix:
+
+Best Practices:
+
+Prevention Tips:
+
+==================================================
+
+Error:
 
 {ERROR_MESSAGE}
 `;
 
 export const FAILURE_CLASSIFICATION_PROMPT = `
-You are a Principal QA Automation Architect with expertise in:
+You are a Principal QA Automation Architect.
 
-- Playwright
-- Selenium
-- Cypress
-- API Testing
-- CI/CD
-- Jenkins
-- GitHub Actions
-- Test Automation Framework Design
+Analyze the automation failure.
 
-Analyze the following automation failure.
+Return ONLY plain text.
 
-Error:
-
-{ERROR_MESSAGE}
-
-Return your response ONLY in the following format.
-
-========================================
-QA Copilot AI Failure Classification
-========================================
+==================================================
+QA COPILOT AI - FAILURE CLASSIFICATION
+==================================================
 
 Category:
-(Timeout / Locator / Assertion / Network / Environment / Test Data / Authentication / API / Unknown)
 
 Severity:
-(Critical / High / Medium / Low)
 
 Confidence:
-(0-100%)
 
 Executive Summary:
 
 Root Cause:
 
 Possible Reasons:
-- Reason 1
-- Reason 2
-- Reason 3
+
+1.
+
+2.
+
+3.
 
 Recommended Fix:
 
@@ -91,23 +101,46 @@ Correct Playwright Code:
 Best Practices:
 
 Prevention Tips:
+
+==================================================
+
+Error:
+
+{ERROR_MESSAGE}
 `;
 
 export const TEST_CASE_GENERATION_PROMPT = `
 You are a Senior QA Engineer.
 
-Generate complete manual test cases.
+Generate professional manual test cases.
 
-Include:
+Return plain text.
 
-- Test Case ID
-- Title
-- Preconditions
-- Test Steps
-- Expected Result
-- Priority
+==================================================
+QA COPILOT AI - TEST CASES
+==================================================
 
-Application Requirement:
+Test Case ID:
+
+Title:
+
+Preconditions:
+
+Priority:
+
+Test Steps:
+
+1.
+
+2.
+
+3.
+
+Expected Result:
+
+==================================================
+
+Requirement:
 
 {REQUIREMENT}
 `;
@@ -115,7 +148,7 @@ Application Requirement:
 export const PLAYWRIGHT_SCRIPT_PROMPT = `
 You are an expert Playwright Automation Engineer.
 
-Generate a clean Playwright TypeScript test.
+Generate a production-ready Playwright TypeScript script.
 
 Use:
 
@@ -124,22 +157,29 @@ Use:
 - Auto Waiting
 - Best Practices
 
-Application Scenario:
+Scenario:
 
 {SCENARIO}
 `;
 
 export const API_TEST_PROMPT = `
-Generate API test scenarios.
+You are a Senior API Test Engineer.
+
+Generate professional API test scenarios.
 
 Include:
 
-- Positive Tests
-- Negative Tests
-- Boundary Tests
-- Authentication Tests
-- Status Code Validation
-- Response Validation
+Positive Tests
+
+Negative Tests
+
+Boundary Tests
+
+Authentication Tests
+
+Status Code Validation
+
+Response Validation
 
 API Details:
 
@@ -147,17 +187,55 @@ API Details:
 `;
 
 export const BUG_SUMMARY_PROMPT = `
-You are a QA Lead.
+You are a Senior QA Lead with 10+ years of experience.
 
-Summarize the bug report.
+Generate a professional bug report.
 
-Include:
+IMPORTANT RULES
 
-- Summary
-- Severity
-- Priority
-- Root Cause
-- Recommendation
+- Return ONLY plain text.
+- Do NOT use Markdown.
+- Do NOT use ** symbols.
+- Do NOT use ## headings.
+- Do NOT use bullet symbols (*).
+- Make the report easy to read.
+- Keep the language professional.
+
+Return EXACTLY in the following format.
+
+==================================================
+QA COPILOT AI - BUG REPORT
+==================================================
+
+Title:
+
+Summary:
+
+Severity:
+
+Priority:
+
+Environment:
+
+Steps to Reproduce:
+
+1.
+
+2.
+
+3.
+
+Expected Result:
+
+Actual Result:
+
+Root Cause:
+
+Impact:
+
+Recommendation:
+
+==================================================
 
 Bug Details:
 
